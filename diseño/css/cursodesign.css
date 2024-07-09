@@ -1,0 +1,777 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: lightblue;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.cabezera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    width: 100%;
+    height: 100px;
+    background-color: #31A4C4;
+    position: relative;
+    margin-bottom: -5px;
+}
+.buscador {
+    flex: 1;
+    min-width: 20px; /* Ajuste para que el buscador no sea demasiado grande */
+    height: 30px;
+    margin-top: 1%;
+    border-radius: 20px;
+    font-size: 14px;
+    padding-left: 15px;
+}
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    display: none;  /* Oculto por defecto, se mostrará en móviles */
+    position: absolute;
+    right: 20px; /* Ajusta la posición al lado derecho */
+}
+nav.menu {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #31A4C4;
+}
+nav.menu.show {
+    display: flex;
+}
+nav.menu select,
+nav.menu a {
+    width: 80%;
+    /*height: 40px;*/
+    /*margin: 5px 0;*/
+    border-radius: 10px;
+    /*font-size: 17px;*/
+    text-align: center;
+}
+.irregistro {
+    background-color: black;
+    color: white;
+}
+
+.navbar{
+    visibility: hidden;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.search-bar {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 5px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.user-info .user-photo {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.user-info .user-name-dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.user-info .user-name-dropdown span {
+    margin-right: 5px;
+}
+
+.user-info .dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.user-info .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+}
+
+.user-info .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-info .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.user-info:hover .dropdown-content {
+    display: block;
+}
+.inicio {
+    width: 100%;
+    padding: 120px;
+    background-image: url(img/fondoRegistro.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.cursos {
+    width: 100%;
+    background-image: url(img/fondoLogin.PNG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.info-area-general {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.info-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.imagen-titulo {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.imagen-titulo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagen-titulo h2 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+footer {
+    width: 100%;
+    height: 280px;
+    background-color: black;
+}
+ul li a {
+    text-decoration: none; 
+    color: inherit; 
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+}
+
+@media (max-width: 426px) {
+
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+        position: relative;
+    }
+    .buscador {
+        width: 180px;
+        font-size: 12px;
+        flex: 1;
+        margin-right: 70px; /* Espacio entre buscador y botón de menú */
+        border: gray solid 1px;
+    }
+    .menu-toggle{
+        margin-top: 0px;
+
+    }
+    nav.menu {
+        flex-direction: column;
+        width: 100%;
+        background-color: #31A4C4;
+        z-index: 1000;
+        position: absolute;
+        top: 100px;
+        left: 0;
+    }
+    nav.menu.show {
+        display: flex;
+    }
+    nav.menu select,
+    nav.menu a {
+        width: 90%; /* Ajustado para mejor alineación en móviles */
+        height: 40px;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 5px;
+    }
+    .irinicio{
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+        border-radius: 10px;
+        border: white solid 1px;
+    }
+    .irregistro{
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+        border-radius: 10px;
+        border: black solid 1px;
+        margin-bottom: 5px;
+    }
+    .descripciongeneral{
+        width: 190px;
+        font-size: 14px;
+        margin-left: -80px;
+        margin-top: 10px;
+    }
+    .btnUnirse{
+        width: 180px;
+        margin-left: -80px;
+        text-align: center;
+        color: white;
+        background-color: black;
+        border-radius: 10px;
+        border: black solid 1px;
+    }
+    .inicio{
+        height: 550px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        
+    }
+    .cursos{
+        height: 500px;
+        margin-top: -22px;    
+    }
+    .imagen-titulo img {
+        width: 100%;
+        height: 100%;
+    }
+    .imagen-titulo h2 {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    .descripcion-area {
+        text-align: justify;
+        padding: 10px;
+        width: 100%;
+    }
+    .descripcion-area button{
+        width: 100%;
+        border-radius: 10px;
+        color: white;
+        background-color: black;
+        border: black solid 1px;
+    }
+    h3{
+        font-size: 14px;
+        padding-top: 20px;
+        color: white;
+        margin-left: 10px;
+    }
+    .contenedordiseño{
+        width: 150px;
+        height: 150px;
+        margin-left: 20px;
+    }
+    .cursos-area {
+        /*background-color: #C8C8CB;*/
+        margin-left: 10px;
+        margin-right: 10px;
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 10px 0;
+        scroll-snap-type: x mandatory;
+    }
+    .cursos-area div {
+        flex: 0 0 200px;
+        height: 180px;
+        background-color: #606062; /* Cambiar color si es necesario */
+        padding: 10px;
+        font-size: 12px;
+        scroll-snap-align: start;
+    }
+    .imagenclase{
+        width: 90%;
+        height: 50%;
+        margin-top: 2px;
+        margin-left: 5px;
+        border-radius: 10px;
+    }
+    h4{
+        color: white;
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    .imagenareadiseño, .imagenareamusical, .imagenareaidiomas{
+        width: 90%;
+        height: 60%;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+    .logopie{
+        width: 100px;
+        margin-top: 20px;
+        margin-left: 20px;
+
+    }
+    .informacionpie{
+        margin-top: 20px;
+        display: flex;
+        gap: 1px;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .nosotros {
+        color: white;
+        font-size: 14px;
+        margin: 0 10px;
+        margin-right: 0;
+    }
+    .encuentranos{
+        color: white;
+        font-size: 14px;
+        margin: 0 60px;
+    }
+    .nosotros li, .encuentranos li{
+        list-style: none;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-left: -40px;
+    }
+
+
+}
+@media (min-width: 427px) and (max-width: 769px) {
+    
+    .cabezera{
+        display: flex;
+    }
+    nav.menu{
+        width:50%;
+        margin-left: 30px;
+    }
+    .explorar,
+    .acercade,
+    .irinicio,
+    .irregistro {
+        min-width: 90px;
+        font-size: 10px;
+
+    }
+
+    .explorar,
+    .acercade{
+        height: 28px;
+    }
+
+    .acercade, .irinicio, .irregistro{
+        margin-left: 5px;
+    }
+
+    
+    .irinicio, .irregistro{
+        height: 28px;
+        border-radius: 10px;
+        border: none;
+
+    }
+
+    nav.menu {
+        display: flex !important; /* Aseguramos que el menú esté visible en tablets */
+        flex-direction: row;
+        align-items: center;
+        position: static; 
+        background-color: transparent; 
+    }
+
+    .descripcion-curso{
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .descripcion-curso p{
+        text-align: justify;
+
+    }
+
+    .descripcion-area button{
+        width: 100%;
+        border-radius: 10px;
+        color: white;
+        background-color: black;
+        border: black solid 1px;
+    }
+
+    .lecciones {
+        margin-left: 4%;
+        margin-right: 4%;
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 10px 0;
+        scroll-snap-type: x mandatory;
+    }
+    .lecciones div {
+        flex: 0 0 230px;
+        height: 180px;
+        background-color: #606062; /* Cambiar color si es necesario */
+        padding: 10px;
+        font-size: 12px;
+        scroll-snap-align: start;
+    }
+    .imagenclase{
+        width: 90%;
+        height: 50%;
+        margin-top: 2px;
+        margin-left: 5px;
+        border-radius: 10px;
+    }
+
+
+    footer{
+        height: 250px;
+    }
+    .logopie{
+        width: 100px;
+        height: auto;
+        margin-top: 20px;
+        margin-left: 20px;
+
+    }
+    .informacionpie{
+        margin-top: -7%;
+        display: flex;
+        gap: 1px;
+        /*justify-content: space-between;*/
+        align-items: flex-start;
+        margin-left: 70%;
+    }
+
+    .nosotros {
+        color: white;
+        font-size: 14px;
+        margin: 0 10px;
+        margin-right: 0;
+    }
+    .encuentranos{
+        color: white;
+        font-size: 14px;
+        margin: 0 60px;
+    }
+    .nosotros li, .encuentranos li{
+        list-style: none;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-left: -40px;
+    }
+}
+@media (min-width:770px){
+    .cabezera{
+        display: flex;
+    }
+    nav.menu{
+        width:50%;
+        margin-left: 30px;
+    }
+    .explorar,
+    .acercade,
+    .irinicio,
+    .irregistro {
+        min-width: 90px;
+        font-size: 10px;
+
+    }
+
+    .explorar,
+    .acercade{
+        height: 28px;
+    }
+
+    .acercade, .irinicio, .irregistro{
+        margin-left: 5px;
+    }
+
+    
+    .irinicio, .irregistro{
+        height: 28px;
+        border-radius: 10px;
+        border: none;
+
+    }
+    .imagen-titulo h2{
+        font-size: 38px;
+    }
+
+    nav.menu {
+        display: flex !important; /* Aseguramos que el menú esté visible en tablets */
+        flex-direction: row;
+        align-items: center;
+        position: static; 
+        background-color: transparent; 
+    }
+
+    .descripcion-area{
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .descripcion-area button{
+        flex: 0 0 20%;
+        border-radius: 10px;
+        color: white;
+        background-color: black;
+        border: black solid 1px;
+    }
+
+    .cursos-area {
+        width: 100%;
+        margin-left: 4%;
+        margin-right: 4%;
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 10px 0;
+        scroll-snap-type: x mandatory;
+    }
+    .cursos-area div {
+        width: 100%;
+        flex: 0 0 230px;
+        height: 180px;
+        background-color: #606062; /* Cambiar color si es necesario */
+        padding: 10px;
+        font-size: 12px;
+        scroll-snap-align: start;
+    }
+    .imagenclase{
+        width: 90%;
+        height: 50%;
+        margin-top: 2px;
+        margin-left: 5px;
+        border-radius: 10px;
+    }
+
+
+    footer{
+        height: 250px;
+    }
+    .logopie{
+        width: 100px;
+        margin-top: 40px;
+        margin-left: 10%;
+
+    }
+    .informacionpie{
+        margin-top: -55px;
+        display: flex;
+        gap: 1px;
+        /*justify-content: space-between;*/
+        align-items: flex-start;
+        margin-left: 70%;
+    }
+
+    .nosotros {
+        color: white;
+        font-size: 14px;
+        margin: 0 10px;
+        margin-right: 0;
+    }
+    .encuentranos{
+        color: white;
+        font-size: 14px;
+        margin: 0 60px;
+    }
+    .nosotros li, .encuentranos li{
+        list-style: none;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-left: -40px;
+    }
+}
+
+@media (min-width:1440px){
+    .cabezera{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        gap: 60px;
+    }
+    nav.menu{
+        width:50%;
+        display: flex;
+        margin-left: 30px;
+        gap: 10px;
+    }
+    .explorar,
+    .acercade,
+    .irinicio,
+    .irregistro {
+        min-width: 90px;
+        font-size: 10px;
+
+    }
+
+    .explorar,
+    .acercade{
+        height: 28px;
+    }
+
+    .acercade, .irinicio, .irregistro{
+        margin-left: 5px;
+    }
+    
+    .irinicio, .irregistro{
+        height: 28px;
+        border-radius: 10px;
+        border: none;
+
+    }
+
+    nav.menu {
+        display: flex !important; /* Aseguramos que el menú esté visible en tablets */
+        flex-direction: row;
+        align-items: center;
+        position: static; 
+        background-color: transparent; 
+    }
+
+
+    .descripcion-area{
+        flex-direction: row;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .descripcion-area button{
+        width: 100%;
+        border-radius: 10px;
+        color: white;
+        background-color: black;
+        border: black solid 1px;
+    }
+
+    .cursos-area {
+        width: 100%;
+        margin-left: 15%;
+        margin-right: 15%;
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 10px 0;
+        scroll-snap-type: x mandatory;
+    }
+    .cursos-area div {
+        flex: 0 0 230px;
+        height: 180px;
+        background-color: #606062; /* Cambiar color si es necesario */
+        padding: 10px;
+        font-size: 12px;
+        scroll-snap-align: start;
+    }
+    .imagenclase{
+        width: 90%;
+        height: 50%;
+        margin-top: 2px;
+        margin-left: 5px;
+        border-radius: 10px;
+    }
+
+
+    footer{
+        height: 250px;
+    }
+    .logopie{
+        width: 100px;
+        margin-top: 40px;
+        margin-left: 10%;
+
+    }
+    .informacionpie{
+        margin-top: -55px;
+        display: flex;
+        gap: 1px;
+        /*justify-content: space-between;*/
+        align-items: flex-start;
+        margin-left: 70%;
+    }
+
+    .nosotros {
+        color: white;
+        font-size: 14px;
+        margin: 0 10px;
+        margin-right: 0;
+    }
+    .encuentranos{
+        color: white;
+        font-size: 14px;
+        margin: 0 60px;
+    }
+    .nosotros li, .encuentranos li{
+        list-style: none;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-left: -40px;
+    }
+}

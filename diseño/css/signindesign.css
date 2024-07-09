@@ -1,0 +1,221 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body{
+    background-image: url(img/fondoRegistro.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+main{
+    background-color: #DFE5ED;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1{
+    margin-top: 18px;
+    margin-left: 7%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.name-fields {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 4%;
+}
+.FirstName{
+    margin-left: 1%;
+    width: 38%;
+    height: 30px;
+    border: solid 0px;
+    background-color: #82D9EA;
+    border-radius: 18px;
+    color: #2D71C2;
+    padding-left: 10px;
+    display: inline-;
+}
+.LastName{
+    margin-right: 4%;
+    width: 48%;
+    height: 30px;
+    border: solid 0px;
+    background-color: #82D9EA;
+    border-radius: 18px;
+    color: #2D71C2;
+    padding-left: 10px;
+}
+
+.Email{
+    width: 90%; 
+    height: 30px;
+    margin-left: 4%;
+    border: solid 0px;
+    background-color: #82D9EA;
+    border-radius: 18px;
+    color: #2D71C2;
+    padding-left: 15px;
+}
+
+.Password{
+    width: 90%;
+    margin-left: 4%;
+    border: solid 0px;
+    background-color: #82D9EA;
+
+    border-radius: 18px;
+    color: #2D71C2;
+    padding-left: 15px;
+}
+.btnSignin{
+    width: 90%;
+    /*height: 70px;*/
+    margin-left: 4%;
+    background-color: #31A4C4;
+    border: solid 0px;
+    border-radius: 18px;
+}
+.imagenRegistro{
+    width: 600px;
+    height: 350px;
+
+    background-image: url(img/imagenRegistro.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+@media (max-width: 426px) {
+    #registerForm{
+        height: 100%;
+    }
+    main {
+        width: 75%;
+        height: 230px;
+    }
+    h1{
+        font-size: 12px;
+    }
+    .name-fields {
+        height: 50px;
+    }
+    .FirstName{
+        height: 30px;
+    }
+    .LastName{
+        height: 30px;
+
+    }
+    .email{
+        height: 30px;
+    }
+    .Password{
+        margin-top: 20px;
+        height: 30px;
+
+    }
+    .btnSignin{
+        margin-top: 20px;
+        height: 30px;
+    }
+    .imagenRegistro{
+        visibility: hidden;
+    }
+}
+@media(min-width:427px) and (max-width:769px){
+    #registerForm{
+        height: 100%;
+    }
+    main{
+        width: 40%;
+        height: 250px;
+    }
+    h1{
+        font-size: 12px;
+    }
+    .name-fields {
+        height: 50px;
+    }
+    .FirstName{
+        height: 30px;
+    }
+    .LastName{
+        height: 30px;
+
+    }
+    .email{
+        height: 30px;
+    }
+    .Password{
+        margin-top: 20px;
+        height: 30px;
+    }
+    .btnSignin{
+        margin-top: 20px;
+        height: 30px;
+    }
+    .imagenRegistro{
+        visibility: hidden;
+    }
+
+}
+
+@media (min-width: 1023px) {
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    #registerForm{
+        height: 50%;
+    }
+    main{
+        width: 25%;
+        height: 240px;
+        margin-left: -320px;
+    }
+    h1{
+        font-size: 12px;
+    }
+    .name-fields {
+        height: 50px;
+    }
+    .FirstName{
+        height: 30px;
+    }
+    .LastName{
+        height: 30px;
+
+    }
+    .email{
+        height: 30px;
+    }
+    .Password{
+        margin-top: 20px;
+        height: 30px;
+    }
+    .btnSignin{
+        margin-top: 20px;
+        height: 30px;
+    }
+    .imagenRegistro{
+        visibility: visible;
+        width: 500px;
+        height: 400px;
+        margin-left: 40%;
+
+    }
+
+}

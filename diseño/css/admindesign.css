@@ -1,0 +1,580 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #e0f7fa;
+}
+
+/* Header Styles */
+.cabezeraestudiante {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar{
+    visibility: hidden;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.search-bar {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 5px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.user-info .user-photo {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.user-info .user-name-dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.user-info .user-name-dropdown span {
+    margin-right: 5px;
+}
+
+.user-info .dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.user-info .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+}
+
+.user-info .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-info .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.user-info:hover .dropdown-content {
+    display: block;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 20px;
+}
+
+
+
+
+.headCurso{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.headCurso h2{
+    width: 50%;
+    text-align: left;
+}
+
+.headCurso button{
+    background: #2c3e50;
+    border: #2c3e50 solid 1px;
+    border-radius: 10px;
+}
+
+.headArea{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.headArea h2{
+    width: 50%;
+    text-align: left;
+}
+
+
+.headArea button{
+    
+    background: #2c3e50;
+    border: #2c3e50 solid 1px;
+    border-radius: 10px;
+}
+
+.cards-cursos, .cards-categorias {
+
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+}
+
+.card {
+    background: #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 14px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 80%;
+    height: 30%;
+    object-fit: cover;
+}
+
+.delete-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Form styles */
+.form-container {
+    display: none; /* Initially hidden */
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container input, .form-container textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-container button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.form-container button[type="button"] {
+    background-color: #f44336;
+    color: white;
+}
+
+
+/* Form styles 2*/
+.form-container2 {
+    display: none; /* Initially hidden */
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-container2 label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container2 input, .form-container textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+.form-container2 button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-container2 button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.form-container2 button[type="button"] {
+    background-color: #f44336;
+    color: white;
+}
+
+.card {
+    position: relative; /* Para que el botón pueda posicionarse relativo a la tarjeta */
+    padding: 10px;
+    background-color: #333; /* Ajusta el color de fondo si es necesario */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card p {
+    margin: 10px 0;
+    color: white;
+}
+
+.delete-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center; /* Centrar el texto del botón */
+    margin-top: 10px; /* Espacio entre el texto y el botón */
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+
+/* Footer Styles */
+footer {
+    width: 100%;
+    height: 280px;
+    background-color: black;
+}
+
+/* Existing Styles*/ 
+.contenidoestudiante {
+    width: 100%;
+    background-image: url('img/fondoArea.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ul li a {
+    text-decoration: none; 
+    color: inherit; 
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+}
+
+/* Responsive Design */
+@media (max-width: 426px) {
+
+    .header .search-bar {
+        margin: 0;
+    }
+    .contenidoestudiante{
+        height: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #welcomeMessage{
+        font-size: 12px;
+        padding-left: 4%;
+    }
+
+    h2{
+        font-size: 12px;
+        padding-left: 4%;
+    }
+    .headCurso h2, .headArea h2{
+        width: 20%;
+    }
+    
+    .cards-categorias, .cards-cursos {
+        /*background-color: #C8C8CB;*/
+        margin-left: 10px;
+        margin-right: 10px;
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 10px 0;
+        scroll-snap-type: x mandatory;
+    }
+    .cards-categorias div, .cards-cursos div {
+        flex: 0 0 100px;
+        height: 100px;
+        background-color: #606062; 
+        padding: 10px;
+        font-size: 12px;
+        scroll-snap-align: start;
+    }
+
+    .card {
+        width: 200px;
+        height: 100px;
+    }
+    .card img{
+        width: 70%;
+        height: 90px;
+    }
+    .logopie{
+        width: 100px;
+        margin-top: 20px;
+        margin-left: 20px;
+
+    }
+    .informacionpie{
+        margin-top: 20px;
+        display: flex;
+        gap: 1px;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .nosotros {
+        color: white;
+        font-size: 14px;
+        margin: 0 10px;
+        margin-right: 0;
+    }
+    .encuentranos{
+        color: white;
+        font-size: 14px;
+        margin: 0 60px;
+    }
+    .nosotros li, .encuentranos li{
+        list-style: none;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-left: 0px;
+    }
+
+}
+
+@media (min-width: 427px) and (max-width: 769px) {
+    .header .navbar ul li {
+        margin-right: 30px;
+    }
+
+
+    .headCurso h2, .headArea h2{
+        width: 14%;
+    }
+
+    .headCurso button{
+        margin-left: 10px;
+    }
+
+    .cards-categorias, .cards-cursos {
+        flex-direction: row;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    .cards-categorias div ,.cards-cursos div {
+        flex: 0 0 150px;
+        height: 150px;
+        background-color: #606062;
+        /* Cambiar color si es necesario */
+        padding: 10px;
+        font-size: 12px;
+        scroll-snap-align: start;
+    }
+
+
+    .card {
+        width: 45%;
+        height: 100px;
+    }
+    .card img{
+        margin-top: 10%;
+        height: 40%;
+    }
+
+    .logopie{
+        width: 100px;
+        margin-top: 20px;
+        margin-left: 20px;
+
+    }
+    .informacionpie{
+        margin-top: 20px;
+        display: flex;
+        gap: 1px;
+        justify-content:right;
+        align-items: flex-start;
+    }
+
+    .nosotros {
+        color: white;
+        font-size: 14px;
+        margin: 0 10px;
+        margin-right: 0;
+    }
+
+    .nosotros h5, .encuentranos h6{
+        margin-left: -40px;
+    }
+    
+    .encuentranos{
+        color: white;
+        font-size: 14px;
+        margin: 0 60px;
+    }
+    .nosotros li, .encuentranos li{
+        list-style: none;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-left: -40px;
+    }
+
+}
+
+@media (min-width: 770px) {
+    .header .navbar ul li {
+        margin-right: 40px;
+    }
+
+    
+    .headCurso h2, .headArea h2{
+        width: 10%;
+    }
+
+    .cards-categorias , .cards-cursos{
+        flex-direction: row;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    .cards-categorias div ,.cards-cursos div {
+        flex: 0 0 160px;
+        height: 150px;
+        background-color: #606062;
+        /* Cambiar color si es necesario */
+        padding: 10px;
+        font-size: 12px;
+        scroll-snap-align: start;
+    }
+
+    .card {
+        width: 180px;
+        height: 130px;
+    }
+
+    .contenidoestudiante{
+        height: 500px;
+    }
+
+    footer{
+        height: 250px;
+    }
+    .logopie{
+        width: 100px;
+        margin-top: 20px;
+        margin-left: 20px;
+
+    }
+    .informacionpie{
+        margin-top: 20px;
+        display: flex;
+        gap: 1px;
+        justify-content:right;
+        align-items: flex-start;
+    }
+
+    .nosotros {
+        color: white;
+        font-size: 14px;
+        margin: 0 10px;
+        margin-right: 0;
+    }
+
+    .nosotros h5, .encuentranos h6{
+        margin-left: -40px;
+    }
+    
+    .encuentranos{
+        color: white;
+        font-size: 14px;
+        margin: 0 60px;
+    }
+    .nosotros li, .encuentranos li{
+        list-style: none;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-left: -40px;
+    }
+    
+}

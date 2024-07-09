@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/welcomedesign.css">
+        <title>Virtual Academy | Official Page Virtual Academy</title>
+        <script src="fronted/scriptwelcome.js" defer></script>
+        <script src="fronted/header.js"></script>
+    </head>
+    <body>
+        <div class="cabezera">
+            <input class="buscador" type="text"
+                placeholder="¿Qué cursos le interesa?">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav class="menu">
+                <select class="explorar" id="explorar"
+                    onchange="handleSelectionChange(this)">
+                    <option value="explorar">Explorar</option>
+                    <!--Mostrar todas las categorias que hay-->
+                </select>
+                <select class="acercade" id="acercade"
+                    onchange="handleSelectionUs(this)">
+                    <option value>Acerca de</option>
+                    <option value="nosotros">Nosotros</option>
+                    <option value="mision">Misión</option>
+                    <option value="vision">Visión</option>
+                    <option value="ayuda">Ayuda</option>
+                </select>
+                <a href="login.html"><button class="irinicio">Iniciar
+                        Sesión</button></a>
+                <a href="signin.html"><button
+                        class="irregistro">Registrarse</button></a>
+            </nav>
+        </div>
+        <div class="inicio">
+            <h2>Virtual Academy</h2>
+            <p class="descripciongeneral">Inicia, Observa, Adentrate en tu
+                carrera con más de 13 cursos online con certificaciones</p>
+            <a href="signin.html"><button class="btnUnirse">Únete de forma
+                    gratuita</button></a>
+        </div>
+        <div class="cursos">
+            <h3>Certificaciones Populares</h3>
+            <div class="certificaciones-populares">                
+                <div class="curso-popular"
+                    onclick="window.location.href='cursos/python.html'">
+                    <img src="../diseño/css/img/python.png" alt
+                        class="imagenclase">
+                    <p class="nombre-curso">Python</p>
+                    <p class="descripcion-curso">Conviértete en un experto en Python con nuestras clases
+                        orientadas a proyectos.</p>
+                </div>
+
+                <!--<div class="contenedorcss"
+                    onclick="window.location.href='cursos/css.html'">
+                    <img src="../diseño/css/img/css.png" alt
+                        class="imagenclase">
+                    <p>CSS</p>
+                    <p>Transforma tus habilidades de diseño web con nuestras
+                        clases de CSS. Aprende a crear sitios web atractivos y
+                        modernos, desde estilos básicos hasta animaciones
+                        avanzadas.</p>
+                </div>
+
+                <div class="contenedorjavascript"
+                    onclick="window.location.href='cursos/javascript.html'">
+                    <img src="../diseño/css/img/javascript.png" alt
+                        class="imagenclase">
+                    <p>Javascript</p>
+                    <p>Conviértete en un experto en JavaScript con nuestras
+                        lecciones interactivas. Domina la programación web y
+                        desarrolla aplicaciones dinámicas con este lenguaje
+                        esencial.</p>
+                </div>
+
+                <div class="contenedorguitarra"
+                    onclick="window.location.href='curso.html'">
+                    <img src="../diseño/css/img/guitarra.PNG" alt
+                        class="imagenclase">
+                    <p>Guitarra</p>
+                    <p>Domina la guitarra con nuestras clases accesibles y
+                        efectivas. Aprende desde los acordes básicos hasta
+                        técnicas avanzadas con instructores dedicados. Ideal
+                        para todos los niveles.</p>
+                </div>
+
+                <div class="contenedorpiano"
+                    onclick="window.location.href='cursos/piano.html'">
+                    <img src="../diseño/css/img/piano.PNG" alt
+                        class="imagenclase">
+                    <p>Piano</p>
+                    <p>Descubre el arte de tocar el piano con nuestros cursos
+                        personalizados. Aprende desde los fundamentos hasta
+                        técnicas avanzadas con profesores experimentados y
+                        apasionados.</p>
+                </div>
+
+                <div class="contenedorpiano"
+                    onclick="window.location.href='cursos/violin.html'">
+                    <img src="../diseño/css/img/violin.jfif" alt
+                        class="imagenclase">
+                    <p>Violin</p>
+                    <p>Embárcate en el maravilloso viaje de aprender violín.
+                        Nuestras lecciones te ayudarán a desarrollar la técnica,
+                        la interpretación y el amor por este hermoso
+                        instrumento.</p>
+                </div>
+
+                <div class="contenedorpiano"
+                    onclick="window.location.href='cursos/ukulele.html'">
+                    <img src="../diseño/css/img/ukulele.jpg" alt
+                        class="imagenclase">
+                    <p>Ukulele</p>
+                    <p>Alegra tus días tocando el ukulele. Con nuestras clases
+                        fáciles de seguir, aprenderás acordes, canciones y
+                        técnicas que harán de ti un músico en poco tiempo.</p>
+
+                </div>
+
+                <div class="contenedoringles"
+                    onclick="window.location.href='cursos/ingles.html'">
+                    <img src="../diseño/css/img/ingles.PNG" alt
+                        class="imagenclase">
+                    <p>Ingles</p>
+                    <p>Domina el inglés con nuestras clases interactivas. Mejora
+                        tu gramática, vocabulario y habilidades de conversación
+                        con profesores nativos. Ideal para todos los
+                        niveles.</p>
+                </div>
+
+                <div class="contenedoringles"
+                    onclick="window.location.href='cursos/frances.html'">
+                    <img src="../diseño/css/img/frances.PNG" alt
+                        class="imagenclase">
+                    <p>Frances</p>
+                    <p>Sumérgete en el francés con lecciones dinámicas y
+                        culturales. Aprende a comunicarte con fluidez y descubre
+                        la rica tradición francesa. Perfecto para principiantes
+                        y avanzados.</p>
+                </div>-->
+            </div>
+            <h4>Explorar Areas</h4>
+            <div class="explorarareas">
+                <div class="areadiseño"
+                    onclick="window.location.href='programacion.html'">
+                    <img class="imagenareadiseño" src="css/img/programacion.jpg"
+                        alt="Diseño">
+                    <p>programación</p>
+                    <p>3 cursos disponibles</p>
+                </div>
+
+                <!--<div class="areamusical"
+                    onclick="window.location.href='areas.html'">
+                    <img class="imagenareamusical" src="css\img\areamusical.png"
+                        alt="musica">
+                    <p>Musica</p>
+                    <p>4 cursos disponibles</p>
+                </div>
+
+                <div class="areaidiomas"
+                    onclick="window.location.href='idiomas.html'">
+                    <img class="imagenareaidiomas" src="css\img\areaidiomas.png"
+                        alt="idiomas">
+                    <p>Idiomas</p>
+                    <p>4 cursos disponibles</p>
+                </div>-->
+            </div>
+        </div>
+        <footer>
+            <div class="footer-container">
+                <img class="logopie" src="css/img/logovirtualacademy.PNG" alt>
+                <div class="informacionpie">
+                    <div class="nosotros">
+                        <h5>Nosotros</h5>
+                        <ul>
+                            <li><a href="informacion.html">Misión</a></li>
+                            <li><a href="informacion.html">Visión</a></li>
+                            <li><a href="informacion.html">Contactos</a></li>
+                        </ul>
+                    </div>
+                    <div class="encuentranos">
+                        <h6>Encuentranos</h6>
+                        <ul>
+                            <link rel="stylesheet"
+                                href="https://www.facebook.com/?locale=es_LA"><li>Facebook</li>
+                            <li>Instagram</li>
+                            <li>Twitter</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

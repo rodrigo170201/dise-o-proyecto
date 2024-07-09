@@ -1,0 +1,516 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #e0f7fa;
+}
+
+/* Header Styles */
+.cabezeraestudiante {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar {
+    visibility: hidden;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.search-bar {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 5px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.user-info .user-photo {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.user-info .user-name-dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.user-info .user-name-dropdown span {
+    margin-right: 5px;
+}
+
+.user-info .dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.user-info .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+}
+
+.user-info .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-info .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.user-info:hover .dropdown-content {
+    display: block;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 20px;
+}
+
+
+.section h2 {
+    margin-bottom: 10px;
+}
+
+.cards {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+}
+
+.my-courses {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+}
+
+.card {
+    background: #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 14px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 80%;
+    object-fit: cover;
+}
+
+/* Footer Styles */
+footer {
+    width: 100%;
+    height: 280px;
+    background-color: black;
+}
+
+ul li a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Existing Styles */
+.contenidoestudiante {
+    width: 100%;
+    background-image: url('img/fondoRegistro.PNG');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 426px) {
+
+    .header .search-bar {
+        margin: 0;
+    }
+
+    .contenidoestudiante {
+        height: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #welcomeMessage {
+        font-size: 12px;
+        padding-left: 4%;
+    }
+
+    h2 {
+        font-size: 12px;
+        padding-left: 4%;
+    }
+
+    .cards {
+        /*background-color: #C8C8CB;*/
+        margin-left: 10px;
+        margin-right: 10px;
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 10px 0;
+        scroll-snap-type: x mandatory;
+    }
+
+    .my-courses {
+        /*background-color: #C8C8CB;*/
+        margin-left: 10px;
+        margin-right: 10px;
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 10px 0;
+        scroll-snap-type: x mandatory;
+    }
+
+    .cards div {
+        flex: 0 0 100px;
+        height: 100px;
+        background-color: #606062;
+        /* Cambiar color si es necesario */
+        padding: 10px;
+        font-size: 12px;
+        scroll-snap-align: start;
+    }
+
+    .my-courses div {
+        flex: 0 0 100px;
+        height: 100px;
+        background-color: #606062;
+        /* Cambiar color si es necesario */
+        padding: 10px;
+        font-size: 12px;
+        scroll-snap-align: start;
+    }
+
+    .card {
+        width: 200px;
+        height: 100px;
+    }
+
+    .card img {
+        width: 70%;
+        height: 90px;
+    }
+
+    .logopie {
+        width: 100px;
+        margin-top: 20px;
+        margin-left: 20px;
+
+    }
+
+    .informacionpie {
+        margin-top: 20px;
+        display: flex;
+        gap: 1px;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .nosotros {
+        color: white;
+        font-size: 14px;
+        margin: 0 10px;
+        margin-right: 0;
+    }
+
+    .encuentranos {
+        color: white;
+        font-size: 14px;
+        margin: 0 60px;
+    }
+
+    .nosotros li,
+    .encuentranos li {
+        list-style: none;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-left: 0px;
+    }
+
+}
+
+@media (min-width: 427px) and (max-width: 1023px) {
+    .header .navbar ul li {
+        margin-right: 30px;
+    }
+
+    .contenidoestudiante {
+        height: 580px;
+    }
+
+    #welcomeMessage {
+        margin-left: 4%;
+    }
+
+    .section h2 {
+        margin-left: 4%;
+    }
+
+    .cards {
+        flex-direction: row;
+        overflow-x: auto;
+        margin-left: 4%;
+        margin-right: 4%;
+        gap: 10px;
+        padding: 10px 0;
+        scroll-snap-type: x mandatory;
+    }
+
+    .my-courses {
+        flex-direction: row;
+        overflow-x: auto;
+        margin-left: 4%;
+        margin-right: 4%;
+        gap: 10px;
+        padding: 10px 0;
+        scroll-snap-type: x mandatory;
+    }
+
+    .cards div {
+        flex: 0 0 200px;
+        height: 200px;
+        background-color: #606062;
+        /* Cambiar color si es necesario */
+        padding: 10px;
+        font-size: 14px;
+        scroll-snap-align: start;
+    }
+
+    .my-courses div {
+        flex: 0 0 200px;
+        height: 200px;
+        background-color: #606062;
+        /* Cambiar color si es necesario */
+        padding: 10px;
+        font-size: 14px;
+        scroll-snap-align: start;
+    }
+
+    .imagenclase {
+        width: 45%;
+        height: 120px;
+    }
+
+    .card {
+        width: 200px;
+        height: 100px;
+    }
+
+    .card img {
+        margin-top: 10%;
+        height: 40%;
+    }
+
+    footer {
+        height: 250px;
+    }
+
+    .logopie {
+        width: 100px;
+        height: auto;
+        margin-top: 20px;
+        margin-left: 20px;
+
+    }
+
+    .informacionpie {
+        margin-top: -7%;
+        display: flex;
+        gap: 1px;
+        align-items: flex-start;
+        margin-left: 70%;
+    }
+
+    .nosotros {
+        color: white;
+        font-size: 16px;
+        margin: 0 10px;
+        margin-right: 0;
+        margin-top: 10%;
+    }
+
+    .encuentranos {
+        color: white;
+        font-size: 16px;
+        margin: 0 60px;
+
+        margin-top: 10%;
+    }
+
+    .nosotros li,
+    .encuentranos li {
+        list-style: none;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header .navbar ul li {
+        margin-right: 40px;
+    }
+
+    .cards {
+        margin-left: 4%;
+        margin-right: 4%;
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 10px 0;
+        scroll-snap-type: x mandatory;
+    }
+
+    .contenidoestudiante {
+        height: 580px;
+    }
+
+    .my-courses {
+        margin-left: 4%;
+        margin-right: 4%;
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 10px 0;
+        scroll-snap-type: x mandatory;
+    }
+
+    .cards div {
+        flex: 0 0 200px;
+        height: 200px;
+        background-color: #606062;
+        /* Cambiar color si es necesario */
+        padding: 10px;
+        font-size: 12px;
+        scroll-snap-align: start;
+    }
+
+    .my-courses div {
+        flex: 0 0 200px;
+        height: 200px;
+        background-color: #606062;
+        /* Cambiar color si es necesario */
+        padding: 10px;
+        font-size: 12px;
+        scroll-snap-align: start;
+    }
+
+    .cards p {
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: justify;
+    }
+
+    .imagenclase {
+        width: 80%;
+        height: 50%;
+        margin-top: 2px;
+        margin-left: 5px;
+        border-radius: 10px;
+    }
+
+    /*.card {
+        width: 180px;
+        height: 180px;
+    }*/
+
+    footer {
+        height: 250px;
+    }
+
+    .logopie {
+        width: 100px;
+        margin-top: 20px;
+        margin-left: 20px;
+
+    }
+
+    .informacionpie {
+        margin-top: 20px;
+        display: flex;
+        gap: 1px;
+        justify-content: right;
+        align-items: flex-start;
+    }
+
+    .nosotros {
+        color: white;
+        font-size: 14px;
+        margin: 0 10px;
+        margin-right: 0;
+    }
+
+    .nosotros h5,
+    .encuentranos h6 {
+        margin-left: -40px;
+    }
+
+    .encuentranos {
+        color: white;
+        font-size: 14px;
+        margin: 0 60px;
+    }
+
+    .nosotros li,
+    .encuentranos li {
+        list-style: none;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-left: -40px;
+    }
+
+}

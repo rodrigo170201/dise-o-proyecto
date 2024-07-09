@@ -1,0 +1,508 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.cabezera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    width: 100%;
+    height: 100px;
+    background-color: #31A4C4;
+    position: relative;
+    margin-bottom: -5px;
+}
+
+.buscador {
+    flex: 1;
+    min-width: 20px;
+    /* Ajuste para que el buscador no sea demasiado grande */
+    height: 30px;
+    margin-top: 1%;
+    border-radius: 20px;
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    display: none;
+    /* Oculto por defecto, se mostrará en móviles */
+    position: absolute;
+    right: 20px;
+    /* Ajusta la posición al lado derecho */
+}
+
+nav.menu {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #31A4C4;
+}
+
+nav.menu.show {
+    display: flex;
+}
+
+nav.menu select,
+nav.menu a {
+    width: 80%;
+    /*height: 40px;*/
+    /*margin: 5px 0;*/
+    border-radius: 10px;
+    /*font-size: 17px;*/
+    text-align: center;
+}
+
+.irregistro {
+    background-color: black;
+    color: white;
+}
+
+.inicio {
+    width: 100%;
+    padding: 120px;
+    background-image: url(img/fondoRegistro.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.info-area-general {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.info-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.imagen-titulo {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.imagen-titulo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagen-titulo h2 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+footer {
+    width: 100%;
+    height: 280px;
+    background-color: black;
+}
+ul li a {
+    text-decoration: none; 
+    color: inherit; 
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+}
+
+/* Estilos específicos para móviles */
+@media (max-width: 426px) {
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+        position: relative;
+    }
+
+    .buscador {
+        width: 180px;
+        font-size: 12px;
+        flex: 1;
+        margin-right: 70px;
+        /* Espacio entre buscador y botón de menú */
+        border: gray solid 1px;
+    }
+
+    .menu-toggle {
+        margin-top: 0px;
+    }
+
+    nav.menu {
+        /*display: none;*/
+        flex-direction: column;
+        width: 100%;
+        background-color: #31A4C4;
+        z-index: 1000;
+        position: absolute;
+        top: 100px;
+        left: 0;
+    }
+
+    nav.menu.show {
+        display: flex;
+    }
+
+    nav.menu select,
+    nav.menu a {
+        width: 90%;
+        /* Ajustado para mejor alineación en móviles */
+        height: 40px;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .irinicio {
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+        border-radius: 10px;
+        border: white solid 1px;
+    }
+
+    .irregistro {
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+        border-radius: 10px;
+        border: black solid 1px;
+        margin-bottom: 5px;
+    }
+    .info-area {
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+        position: relative;
+    }
+
+    .imagen-titulo img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .imagen-titulo h2 {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .descripcion-area1 {
+        text-align: justify;
+        padding: 10px;
+        width: 100%;
+    }
+
+    
+
+    .contenedordiseño{
+        width: 150px;
+        height: 150px;
+        margin-left: 20px;
+    }
+    .cursos-area {
+        /*background-color: #C8C8CB;*/
+        width: 90%;
+        margin-left: 10px;
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 10px 0;
+        scroll-snap-type: x mandatory;
+    }
+    .cursos-area div {
+        flex: 0 0 200px;
+        height: 180px;
+        background-color: #606062; /* Cambiar color si es necesario */
+        padding: 10px;
+        font-size: 12px;
+        scroll-snap-align: start;
+    }
+    .imagenclase{
+        width: 90%;
+        height: 50%;
+        margin-top: 2px;
+        margin-left: 5px;
+        border-radius: 10px;
+    }
+
+
+
+
+    .logopie{
+        width: 100px;
+        margin-top: 20px;
+        margin-left: 20px;
+
+    }
+    .informacionpie{
+        margin-top: 20px;
+        display: flex;
+        gap: 1px;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .nosotros {
+        color: white;
+        font-size: 14px;
+        margin: 0 10px;
+        margin-right: 0;
+    }
+    .encuentranos{
+        color: white;
+        font-size: 14px;
+        margin: 0 60px;
+    }
+    .nosotros li, .encuentranos li{
+        list-style: none;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-left: -40px;
+    }
+
+
+}
+
+@media (min-width: 427px) and (max-width: 769px) {
+    
+    .cabezera{
+        display: flex;
+    }
+    nav.menu{
+        width:50%;
+        margin-left: 30px;
+    }
+    .explorar,
+    .acercade,
+    .irinicio,
+    .irregistro {
+        min-width: 90px;
+        font-size: 10px;
+
+    }
+
+    .explorar,
+    .acercade{
+        height: 28px;
+    }
+
+    .acercade, .irinicio, .irregistro{
+        margin-left: 5px;
+    }
+
+    
+    .irinicio, .irregistro{
+        height: 28px;
+        border-radius: 10px;
+        border: none;
+
+    }
+
+    nav.menu {
+        display: flex !important; /* Aseguramos que el menú esté visible en tablets */
+        flex-direction: row;
+        align-items: center;
+        position: static; 
+        background-color: transparent; 
+    }
+
+    .cursos-area {
+        width: 100%;
+        margin-left: 4%;
+        margin-right: 4%;
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 10px 0;
+        scroll-snap-type: x mandatory;
+    }
+    .cursos-area div {
+        flex: 0 0 230px;
+        height: 180px;
+        background-color: #606062; /* Cambiar color si es necesario */
+        padding: 10px;
+        font-size: 12px;
+        scroll-snap-align: start;
+    }
+    .imagenclase{
+        width: 90%;
+        height: 50%;
+        margin-top: 2px;
+        margin-left: 5px;
+        border-radius: 10px;
+    }
+
+
+    footer{
+        height: 250px;
+    }
+    .logopie{
+        width: 100px;
+        margin-top: 20px;
+        margin-left: 20px;
+
+    }
+    .informacionpie{
+        margin-top: -7%;
+        display: flex;
+        gap: 1px;
+        /*justify-content: space-between;*/
+        align-items: flex-start;
+        margin-left: 70%;
+    }
+
+    .nosotros {
+        color: white;
+        font-size: 14px;
+        margin: 0 10px;
+        margin-right: 0;
+    }
+    .encuentranos{
+        color: white;
+        font-size: 14px;
+        margin: 0 60px;
+    }
+    .nosotros li, .encuentranos li{
+        list-style: none;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-left: -40px;
+    }
+}
+
+@media (min-width: 770px) {
+    .cabezera{
+        display: flex;
+    }
+    nav.menu{
+        width:50%;
+        margin-left: 30px;
+    }
+    .explorar,
+    .acercade,
+    .irinicio,
+    .irregistro {
+        min-width: 90px;
+        font-size: 10px;
+
+    }
+
+    .explorar,
+    .acercade{
+        height: 28px;
+    }
+
+    .acercade, .irinicio, .irregistro{
+        margin-left: 5px;
+    }
+
+    
+    .irinicio, .irregistro{
+        height: 28px;
+        border-radius: 10px;
+        border: none;
+
+    }
+    nav.menu {
+        display: flex !important; /* Aseguramos que el menú esté visible en tablets */
+        flex-direction: row;
+        align-items: center;
+        position: static; 
+        background-color: transparent; 
+    }
+
+    .cursos-area {
+        width: 100%;
+        margin-left: 4%;
+        margin-right: 4%;
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 10px 0;
+        scroll-snap-type: x mandatory;
+    }
+    .cursos-area div {
+        flex: 0 0 230px;
+        height: 180px;
+        background-color: #606062; /* Cambiar color si es necesario */
+        padding: 10px;
+        font-size: 12px;
+        scroll-snap-align: start;
+    }
+    .imagenclase{
+        width: 90%;
+        height: 50%;
+        margin-top: 2px;
+        margin-left: 5px;
+        border-radius: 10px;
+    }
+
+
+    .footer-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .logopie{
+        width: 100px;
+        margin-top: 20px;
+        margin-left: 20px;
+
+    }
+    .informacionpie{
+        display: flex;
+        gap: 1px;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .nosotros {
+        color: white;
+        font-size: 14px;
+        margin: 0 10px;
+        margin-right: 0;
+    }
+    .encuentranos{
+        color: white;
+        font-size: 14px;
+        margin: 0 60px;
+    }
+    .nosotros li, .encuentranos li{
+        list-style: none;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-left: -40px;
+    }
+}

@@ -1,0 +1,107 @@
+
+/* Header Styles */
+.cabezeraestudiante {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
+    padding: 10px 20px;
+    color: white;
+}
+.navbar{
+    visibility: hidden;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.search-bar {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 5px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.user-info .user-photo {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.user-info .user-name-dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.user-info .user-name-dropdown span {
+    margin-right: 5px;
+}
+
+.user-info .dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.user-info .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+}
+
+.user-info .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-info .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.user-info:hover .dropdown-content {
+    display: block;
+}
+@media (max-width: 426px) {
+    .header .search-bar {
+        margin: 0;
+    }
+}
+
+@media (min-width: 427px) and (max-width: 769) {
+    .header .navbar ul li {
+        margin-right: 30px;
+    }   
+}
+
+@media (min-width: 1024px) {
+    .header .navbar ul li {
+        margin-right: 40px;
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/areadesign.css">
+    <script src="fronted/scriptarea.js" defer></script>
+    <script src="fronted/header.js" defer></script>
+</head>
+<body>
+    <div class="cabezera">
+        <input class="buscador" type="text" placeholder="¿Qué cursos le interesa?">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav class="menu">
+            <select class="explorar" id="explorar" onchange="handleSelectionChange(this)">
+                <!-- onmouseover="showExplorer()" onmouseout="hideExplorer()" -->
+                <option value="explorar">Explorar</option>
+                <option value="programacion">Programación</option>
+                <option value="musica">Música</option>
+                <option value="idiomas">Idiomas</option>
+            </select>
+            <select class="acercade" id="acercade" onchange="handleSelectionUs(this)">
+                <option value>Acerca de</option>
+                <option value="nosotros">Nosotros</option>
+                <option value="mision">Misión</option>
+                <option value="vision">Visión</option>
+                <option value="ayuda">Ayuda</option>
+            </select>
+            <a href="login.html"><button class="irinicio">Iniciar
+                    Sesión</button></a>
+            <a href="signin.html"><button
+                    class="irregistro">Registrarse</button></a>
+        </nav>
+    </div>
+
+    <div class="info-area-general">
+        <div class="info-area">
+            <div class="imagen-titulo">
+                <img src="../diseño/css/img/areamusical.PNG" alt="Musica">
+                <h2>Musica</h2>
+            </div>
+            <div class="descripcion-area">
+                <p>Desarrolla habilidades musicales en diferentes instrumentos, guitarra, piano, violín, ukulele deja que tu artista interior salga a la luz con lecciones cortas y prácticas.</p>
+            </div>
+        </div>
+
+        <div class="cursos-area">
+            <div class="contenedordiseño" onclick="window.location.href='cursos/violin.html'">
+                <img src="../diseño/css/img/violin.jfif" alt
+                    class="imagenclase">
+                <p>Violin</p>
+            </div>
+
+            <div class="contenedorguitarra" onclick="window.location.href='curso.html'">
+                <img src="../diseño/css/img/guitarra.PNG" alt
+                    class="imagenclase">
+                <p>Guitarra</p>
+            </div>
+
+            <div class="contenedorpiano" onclick="window.location.href='cursos/piano.html'">
+                <img src="../diseño/css/img/piano.PNG" alt
+                    class="imagenclase">
+                <p>Piano</p>
+            </div>
+
+            <div class="contenedoringles" onclick="window.location.href='cursos/ukulele.html'">
+                <img src="../diseño/css/img/ukulele.jpg" alt
+                    class="imagenclase">
+                <p>Ukulele</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <img class="logopie" src="css/img/logovirtualacademy.PNG" alt>
+            <div class="informacionpie">
+                <div class="nosotros">
+                    <h5>Nosotros</h5>
+                    <ul>
+                        <li><a href="informacion.html">Misión</a></li>
+                        <li><a href="informacion.html">Visión</a></li>
+                        <li><a href="informacion.html">Contactos</a></li>
+                    </ul>
+                </div>
+                <div class="encuentranos">
+                    <h6>Encuentranos</h6>
+                    <ul>
+                        <link rel="stylesheet"
+                            href="https://www.facebook.com/?locale=es_LA"><li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Twitter</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+</body>
+</html>

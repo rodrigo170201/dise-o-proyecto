@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/informaciondesign.css">
+    <script src="fronted/scriptwelcome.js" defer></script>
+    <script src="fronted/header.js" defer></script>
+</head>
+<body>
+    <div class="cabezera">
+        <input class="buscador" type="text" placeholder="¿Qué cursos le interesa?">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav class="menu">
+            <select class="explorar" id="explorar" onchange="handleSelectionChange(this)">
+                <!-- onmouseover="showExplorer()" onmouseout="hideExplorer()" -->
+                <option value="explorar">Explorar</option>
+            </select>
+            <select class="acercade" id="acercade" onchange="handleSelectionUs(this)">
+                <option value>Acerca de</option>
+                <option value="nosotros">Nosotros</option>
+                <option value="mision" onclick="window.location.href='informacion.html'">Misión</option>
+                <option value="vision">Visión</option>
+                <option value="ayuda">Ayuda</option>
+            </select>
+            <a href="login.html"><button class="irinicio">Iniciar
+                    Sesión</button></a>
+            <a href="signin.html"><button
+                    class="irregistro">Registrarse</button></a>
+        </nav>
+    </div>
+
+    <div class="info">
+        <div class="mision">
+            <div class="text-info">
+                <h2>Virtual Academy</h2>
+                <strong><p>Misión</p></strong>
+                <p>Nuestra misión es llegar en formar profesionales calificados listos para causar el mayor impacto en las diferentes áreas. Dotándolos no solo de información sino también de práctica guiada para poner a prueba lo aprendido.</p>
+            </div>
+            <div class="image-info">
+                <img src="../diseño/css/img/informacion.PNG" alt="Misión Imagen">
+            </div>
+        </div>
+        <div class="vision">
+            <strong><p>Visión</p></strong>
+            <p>Nuestra visión es llegar en convertirnos en la academia virtual preferida por los estudiantes y público en general, llegando a tener mayor prestigio y preferencias en la sociedad académica.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <img class="logopie" src="css/img/logovirtualacademy.PNG" alt>
+            <div class="informacionpie">
+                <div class="nosotros">
+                    <h5>Nosotros</h5>
+                    <ul>
+                        <li><a href="informacion.html">Misión</a></li>
+                        <li><a href="informacion.html">Visión</a></li>
+                        <li><a href="informacion.html">Contactos</a></li>
+                    </ul>
+                </div>
+                <div class="encuentranos">
+                    <h6>Encuentranos</h6>
+                    <ul>
+                        <link rel="stylesheet"
+                            href="https://www.facebook.com/?locale=es_LA"><li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Twitter</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+</body>
+</html>

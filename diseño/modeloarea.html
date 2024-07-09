@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Academy | Areas</title>
+    <link rel="stylesheet" href="css/areadesign.css">
+    <script src="fronted/scriptarea.js" defer></script>
+    <script src="fronted/headercategy.js" defer></script>
+</head>
+<body>
+    <div class="cabezera">
+        <input class="buscador" type="text" placeholder="¿Qué cursos le interesa?">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav class="menu">
+            <select class="explorar" id="explorar" onchange="handleSelectionChange(this)">
+                <!-- onmouseover="showExplorer()" onmouseout="hideExplorer()" -->
+                <option value="explorar">Explorar</option>
+            </select>
+            <select class="acercade" id="acercade" onchange="handleSelectionUs(this)">
+                <option value>Acerca de</option>
+                <option value="nosotros">Nosotros</option>
+                <option value="mision">Misión</option>
+                <option value="vision">Visión</option>
+                <option value="ayuda">Ayuda</option>
+            </select>
+            <a href="login.html"><button class="irinicio">Iniciar
+                    Sesión</button></a>
+            <a href="signin.html"><button
+                    class="irregistro">Registrarse</button></a>
+        </nav>
+    </div>
+
+    <div class="info-area-general">
+        <div class="info-area">
+            <div class="imagen-titulo">
+                <img class="imagen-area"  src="" alt="Musica">
+                <h2 class="nombre-area"></h2>
+            </div>
+            <div class="descripcion-area1">
+                <p class="descripcion-area"></p>
+            </div>
+        </div>
+
+        <div class="cursos-area">
+            <!--Cargando Cursos del Area/Categoria-->
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <img class="logopie" src="css/img/logovirtualacademy.PNG" alt>
+            <div class="informacionpie">
+                <div class="nosotros">
+                    <h5>Nosotros</h5>
+                    <ul>
+                        <li><a href="informacion.html">Misión</a></li>
+                        <li><a href="informacion.html">Visión</a></li>
+                        <li><a href="informacion.html">Contactos</a></li>
+                    </ul>
+                </div>
+                <div class="encuentranos">
+                    <h6>Encuentranos</h6>
+                    <ul>
+                        <link rel="stylesheet"
+                            href="https://www.facebook.com/?locale=es_LA"><li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Twitter</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+</body>
+</html>
